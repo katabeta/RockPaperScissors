@@ -1,0 +1,7 @@
+
+public class Player {
+	private isHuman;
+	public Player(boolean isHuman){
+		this.isHuman = isHuman;
+	}
+}

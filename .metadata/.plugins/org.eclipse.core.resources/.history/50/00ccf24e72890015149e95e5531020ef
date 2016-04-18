@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Game {
+	private int rounds;
+	private int player1Score = 0;
+	private int player2Score = 0;
+	private boolean againstHuman;
+	Scanner in = new Scanner(System.in);
+	
+	
+	public Game(int roundsToPlay, boolean againstHuman){
+		this.rounds = roundsToPlay;	
+	}
+	
+	private void displayOptions(){
+		System.out.println("1: ROCK");
+		System.out.println("2: PAPER");
+		System.out.println("3: SCISSORS");
+	}
+	private int chooseCard(boolean human){
+		int toReturn;
+		while(true){
+			if(in.hasNextInt()){
+				toReturn = in.nextInt();
+				break;
+			} else {
+				displayOptions();
+				System.out.println("Please enter an integer indicating your choice");
+			}
+		}
+		return toReturn;
+	}
+	
+	private void playRound(){
+		if(againstHuman){
+			displayOptions();
+			System.out.println("PLAYER 1: please enter the number of your choice");
+			chooseCard(true);
+		} else{
+			
+		}
+	}
+}
